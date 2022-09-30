@@ -16,3 +16,6 @@ const checkStringLength = (string, maxLength) => {
   }
   return true;
 };
+
+randomNumber(1, 2);
+checkStringLength('string', 10);
