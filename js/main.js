@@ -1,21 +1,17 @@
-const randomNumber = (min, max) => {
-  let currentNumber;
+const getRandomNumber = (min, max) => {
   if (min < 0 || max < 0) {
-    return NaN;
+    throw 'Введены некорректные значения';
   }
+  let currentNumber;
   if (min > max) {
     currentNumber = max + Math.random() * (min + 1 - max);
+  } else {
+    currentNumber = min + Math.random() * (max + 1 - min);
   }
-  currentNumber = min + Math.random() * (max + 1 - min);
   return Math.floor(currentNumber);
 };
 
-const checkStringLength = (string, maxLength) => {
-  if (string.length > maxLength) {
-    return false;
-  }
-  return true;
-};
+const checkStringLength = (string, maxLength) => string.length > maxLength;
 
-randomNumber(1, 2);
+getRandomNumber(1, 10);
 checkStringLength('string', 10);
