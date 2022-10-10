@@ -11,7 +11,7 @@ const getRandomNumber = (min, max) => {
   }
 };
 
-const checkStringLength = (string, maxLength) => string.length > maxLength;
+const checkStringLength = (string, maxLength) => string.length <= maxLength;
 
 getRandomNumber(1, 10);
 checkStringLength('string', 10);
