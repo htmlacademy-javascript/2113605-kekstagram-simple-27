@@ -26,3 +26,7 @@ const createPhoto = (index) => ({
 const getPhoto = () => (Array.from({
   length: PHOTO_COUNT
 }, (_photo, indexPhoto) => createPhoto(indexPhoto + 1)));
+
+
+checkStringLength('fsadgsdgs', 5);
+getPhoto();
