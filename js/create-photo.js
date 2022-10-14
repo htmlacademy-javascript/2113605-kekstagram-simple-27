@@ -8,4 +8,4 @@ const createPhoto = (index) => ({
   comments: getRandomNumber(0, 200),
 });
 
-export {createPhoto};
+export { createPhoto };

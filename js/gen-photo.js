@@ -5,4 +5,4 @@ const genPhoto = () => Array.from({
   length: PHOTO_COUNT
 }, (_photo, indexPhoto) => createPhoto(indexPhoto + 1));
 
-export {genPhoto};
+export { genPhoto };
