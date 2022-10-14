@@ -5,9 +5,9 @@ const getRandomNumber = (min, max) => {
     if (min < 0 || max < 0) {
       throw 'Введены некорректные значения';
     }
-    return (min > max) ?
-      Math.floor(max + Math.random() * (min + 1 - max)) :
-      Math.floor(min + Math.random() * (max + 1 - min));
+    return (min > max)
+      ? Math.floor(max + Math.random() * (min + 1 - max))
+      : Math.floor(min + Math.random() * (max + 1 - min));
   } else {
     throw 'Введены некорректные значения';
   }
@@ -23,10 +23,10 @@ const createPhoto = (index) => ({
   comments: getRandomNumber(0, 200),
 });
 
-const getPhoto = () => (Array.from({
+const genPhoto = () => (Array.from({
   length: PHOTO_COUNT
 }, (_photo, indexPhoto) => createPhoto(indexPhoto + 1)));
 
 
 checkStringLength('fsadgsdgs', 5);
-getPhoto();
+genPhoto();
