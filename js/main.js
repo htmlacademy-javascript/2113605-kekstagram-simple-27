@@ -1,8 +1,7 @@
 import {renderPicture} from './render-picture.js';
-import {onEditModalControl, manageImageSize, applyEffectOnImage} from './form.js';
+import {manageForm} from './form/index.js';
 
 renderPicture();
-onEditModalControl();
-manageImageSize();
-applyEffectOnImage();
+manageForm();
+
 
