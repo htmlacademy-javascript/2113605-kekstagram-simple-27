@@ -1,6 +1,6 @@
-import { onEditModalControl, form } from './onEditModalControl.js';
-import { manageImageSize } from './manageImageSize.js';
-import { applyEffectOnImage } from './applyEffectOnImage.js';
+import { onEditModalControl, form } from './on-edit-modal-control.js';
+import { manageImageSize } from './manage-image-size.js';
+import { applyEffectOnImage } from './apply-effect-on-image.js';
 
 const manageForm = () => {
 
