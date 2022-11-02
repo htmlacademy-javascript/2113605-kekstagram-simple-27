@@ -4,7 +4,6 @@ const form = document.querySelector('.img-upload__form');
 const inputUploadFile = form.querySelector('#upload-file');
 const imgOverlay = form.querySelector('.img-upload__overlay');
 const uploadCancel = form.querySelector('#upload-cancel');
-// const textDescription = form.querySelector('.text__description');
 const imgPreview = document.querySelector('.img-upload__preview img');
 
 const onEditModalControl = () => {
