@@ -5,6 +5,7 @@ const scaleControlValue = imgScale.querySelector('.scale__control--value');
 const blockImgPreview = document.querySelector('.img-upload__preview');
 
 const manageImageSize = () => {
+  let sizeValue = Number.parseInt(scaleControlValue.value, 10);
 
   const transformImages = (size) => {
     const currentSize = Number(size) / 100;
@@ -12,8 +13,6 @@ const manageImageSize = () => {
   };
 
   const increaseSizeValue = () => {
-    let sizeValue = parseInt(scaleControlValue.value, 10);
-
     sizeValue = Math.min(sizeValue + 25, 100);
     scaleControlValue.value = `${sizeValue}%`;
 
@@ -21,8 +20,6 @@ const manageImageSize = () => {
   };
 
   const decreaseImageSize = () => {
-    let sizeValue = Number.parseInt(scaleControlValue.value, 10);
-
     sizeValue = Math.max(sizeValue - 25, 25);
     scaleControlValue.value = `${sizeValue}%`;
 
