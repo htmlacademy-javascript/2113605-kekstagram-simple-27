@@ -1,11 +1,7 @@
-import { genPhoto } from './gen-photo.js';
-
-const renderPicture = () => {
+const renderPicture = (pictures) => {
   const pictureTemplate = document.querySelector('#picture')
     .content
     .querySelector('.picture');
-
-  const pictures = genPhoto();
 
   const pictureListElement = document.querySelector('.pictures');
   const picturesListFragment = document.createDocumentFragment();

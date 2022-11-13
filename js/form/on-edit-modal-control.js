@@ -1,5 +1,9 @@
-import {isEscapeKey} from '../util.js';
-import { Slider } from './slider.js';
+import {
+  isEscapeKey,
+} from '../util.js';
+import {
+  Slider
+} from './slider.js';
 
 const form = document.querySelector('.img-upload__form');
 const inputUploadFile = form.querySelector('#upload-file');
@@ -9,7 +13,6 @@ const imgPreview = document.querySelector('.img-upload__preview img');
 const blockImgPreview = document.querySelector('.img-upload__preview');
 
 const onEditModalControl = () => {
-
   const onModalEscKeydown = (evt) => {
     if (isEscapeKey(evt)) {
       evt.preventDefault();
@@ -20,15 +23,6 @@ const onEditModalControl = () => {
   function showPhotoEditingWindow() {
     imgOverlay.classList.remove('hidden');
     document.body.classList.add('modal-open');
-  }
-
-  function closePhotoEditingWindow() {
-    imgOverlay.classList.add('hidden');
-    document.body.classList.remove('modal-open');
-    form.reset();
-    imgPreview.className = '';
-    blockImgPreview.style.transform = `scale(${1})`;
-    Slider.destroy();
   }
 
   inputUploadFile.addEventListener('input', () => {
@@ -43,4 +37,17 @@ const onEditModalControl = () => {
 
 };
 
-export {form, onEditModalControl};
+function closePhotoEditingWindow() {
+  imgOverlay.classList.add('hidden');
+  document.body.classList.remove('modal-open');
+  form.reset();
+  imgPreview.className = '';
+  blockImgPreview.style.transform = `scale(${1})`;
+  Slider.destroy();
+}
+
+export {
+  form,
+  closePhotoEditingWindow,
+  onEditModalControl
+};
