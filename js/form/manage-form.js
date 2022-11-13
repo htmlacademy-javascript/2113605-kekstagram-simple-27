@@ -42,7 +42,7 @@ const setUserFormSubmit = (onSuccess) => {
           closeAlertOutside('.success');
         },
         () => {
-          showAlert('.error', closeAlert('.error', '.error__button'));
+          showAlert('.error');
           unblockSubmitButton();
           closeAlert('.error', '.error__button');
           closeAlertOutside('.error');
