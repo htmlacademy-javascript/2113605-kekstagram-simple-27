@@ -42,7 +42,7 @@ function closePhotoEditingWindow() {
   document.body.classList.remove('modal-open');
   form.reset();
   imgPreview.className = '';
-  blockImgPreview.style.transform = `scale(${1})`;
+  blockImgPreview.style.transform = 'scale(1)';
   Slider.destroy();
 }
 
