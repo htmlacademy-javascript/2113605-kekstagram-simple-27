@@ -13,10 +13,21 @@ const imgPreview = document.querySelector('.img-upload__preview img');
 const blockImgPreview = document.querySelector('.img-upload__preview');
 
 const onEditModalControl = () => {
+  const errorContainer = document.querySelector('.error');
+  const successContainer = document.querySelector('.success');
   const onModalEscKeydown = (evt) => {
     if (isEscapeKey(evt)) {
       evt.preventDefault();
-      closePhotoEditingWindow();
+
+      if(!errorContainer.classList.contains('hidden')) {
+        errorContainer.classList.add('hidden');
+      } else {
+        closePhotoEditingWindow();
+      }
+      if(!successContainer.classList.contains('hidden')) {
+        successContainer.classList.add('hidden');
+        closePhotoEditingWindow();
+      }
     }
   };
 
