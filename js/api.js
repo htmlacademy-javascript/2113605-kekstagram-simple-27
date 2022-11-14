@@ -1,7 +1,12 @@
+import {showErrorAlert} from './util.js';
+
 const getData = (onSuccess) => {
   fetch('https://27.javascript.pages.academy/kekstagram-simple/data')
     .then((response) => response.json())
-    .then(onSuccess);
+    .then(onSuccess)
+    .catch(() => {
+      showErrorAlert('Ошибка загруки данных! Обновите страницу.');
+    });
 };
 
 const sendData = (onSuccess, onMessage, body) => {
